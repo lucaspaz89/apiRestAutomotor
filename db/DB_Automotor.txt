@@ -1,0 +1,46 @@
+base de datos
+-AUTOMOTOR
+
+tablas
+-CARDS
+---id int primary key
+---marca_brand nvarchar(200)
+
+-MODELSCARDS
+---id int primary key
+---marca_brand int
+---modelo_models nvarchar(200)
+
+-COLOR
+---id int primary key
+---modelsCards int
+---colorCards nvarchar(200)
+
+use master
+go
+create database [AutomotorDB]
+on
+
+create table CARDS
+(
+id int not null primary key.
+marca_brand nvarchar(200) not null
+)
+go
+
+
+create table CARDS
+(
+id int not null primary key.
+marca_brand int not null,
+modelo_models nvarchar(200) not null
+)
+go
+
+create table CARDS
+(
+id int not null primary key.
+modelsCards int not null,
+colorCards nvarchar(200) not null
+)
+go
