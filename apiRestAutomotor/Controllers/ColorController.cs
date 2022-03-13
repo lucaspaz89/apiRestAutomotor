@@ -28,6 +28,7 @@ namespace apiRestAutomotor.Controllers
             string query = @"
                             select cl.id, cl.colorCards, cl.modelsCards, mdlCar.modelo_models from color cl
                             inner join modelsCards mdlCar on mdlCar.id = cl.modelsCards
+                            inner join cards cr on cr.id = mdlCar.marca_brand
                             ";
             DataTable table = new DataTable();
             string sqlDtSource = _configuration.GetConnectionString("devConnection");

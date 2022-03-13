@@ -26,7 +26,7 @@ namespace apiRestAutomotor.Controllers
         public JsonResult Get()
         {
             string query = @"
-                            select mdlCar.id, cr.marca_brand, mdlCar.modelo_models from modelsCards mdlCar 
+                            select mdlCar.id, cr.marca_brand, cr.id, mdlCar.modelo_models from modelsCards mdlCar 
                             inner join cards cr on mdlCar.marca_brand = cr.id
                             ";
             DataTable table = new DataTable();
